@@ -1,0 +1,8 @@
+.card {
+    border-radius: 1rem;
+    background-color: aqua;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}

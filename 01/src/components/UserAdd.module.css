@@ -1,0 +1,14 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 3ch;
+    justify-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 15ch;
+    margin: 5ch;
+    justify-items: center;
+}
