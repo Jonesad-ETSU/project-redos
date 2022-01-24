@@ -5,15 +5,19 @@ import Users from "./components/Users";
 function App() {
   const [users, setUsers] = useState([]);
   const addUserHandler = (user) => {
-    console.log(user);
     setUsers((prevUsers) => {
-      return [ ...prevUsers, user ]
+      return [...prevUsers, user];
     });
   };
+
+  const removeUserHandler = (id) => {
+    setUsers((prev) => prev.filter((x) => x.id !== id));
+  };
+  
   return (
     <div className="gap">
-      <AddUser onAddUser={addUserHandler}/>
-      <Users users={users}/>
+      <AddUser onAddUser={addUserHandler} />
+      <Users users={users} onRemove={removeUserHandler} />
     </div>
   );
 }

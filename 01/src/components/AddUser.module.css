@@ -1,8 +1,14 @@
-.input {
+.input-container {
     display: flex;
     flex-direction: column;
     gap: 3ch;
     justify-items: center;
+}
+
+.input {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1ch;
 }
 
 .container {

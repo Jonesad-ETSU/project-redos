@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Card from "./UI/Card";
 
-import styles from "./UserAdd.module.css";
+import styles from "./AddUser.module.css";
 
 const AddUser = (props) => {
   const userName = useRef();
@@ -13,16 +13,16 @@ const AddUser = (props) => {
     const age = inputAge.current.value;
 
     if (name.length === 0) {
-        alert("Please Enter a name.");
-        return;
+      alert("Please Enter a name.");
+      return;
     }
 
     if (!age) {
-        alert("Please Enter an age.");
-        return;
+      alert("Please Enter an age.");
+      return;
     }
 
-    props.onAddUser({ name, age });
+    props.onAddUser({ name, age, id: Math.random() });
 
     inputAge.current.value = "";
     userName.current.value = "";
@@ -32,12 +32,12 @@ const AddUser = (props) => {
     <Card>
       <form onSubmit={submitHandler}>
         <section className={styles.container}>
-          <section className={styles.input}>
-            <section>
+          <section className={styles["input-container"]}>
+            <section className={styles.input}>
               <label>Username </label>
               <input ref={userName} type="string" />
             </section>
-            <section>
+            <section className={styles.input}>
               <label>Age (Years) </label>
               <input ref={inputAge} type="number" min="0" max="120" />
             </section>

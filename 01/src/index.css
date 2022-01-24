@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  color: white;
 }
 
 .gap {
@@ -10,13 +11,17 @@
   gap: 2rem;
 }
 
+input {
+  background-color: #181818;
+}
+
 html {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
-  margin: 0;
-  background-color: #3f3f3f;
+  margin: 3rem;
+  background-color: #3f3f3f;  
 }
 
 button {

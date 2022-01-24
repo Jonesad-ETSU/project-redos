@@ -9,7 +9,13 @@ const Users = (props) => {
       <div className={styles.container}>
         <h1>Users List</h1>
         {props.users.map((user) => (
-          <User key={user.age} name={user.name} age={user.age} />
+          <User
+            key={`item-${user.id}`}
+            id={user.id}
+            name={user.name}
+            age={user.age}
+            onRemove={props.onRemove.bind(null, user.id)}
+          />
         ))}
       </div>
     </Card>
