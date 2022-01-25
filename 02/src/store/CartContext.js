@@ -41,6 +41,22 @@ const reducerFn = (state, action) => {
         totalPrice: newTotalPrice,
       };
     }
+  } else if (action.type === "DEL") {
+    let newItems = [...state.items];
+    const existingItem = state.items.find((item) => item.name === action.name);
+    if (existingItem) {
+      existingItem.amount -= action.amount;
+      if (existingItem.amount <= 0) {
+        newItems = newItems.filter((x) => x.name !== action.name);
+      }
+      const newTotalPrice =
+        state.totalPrice - action.amount * existingItem.price;
+        console.log(newTotalPrice);
+      return {
+        items: newItems,
+        totalPrice: newTotalPrice,
+      };
+    }
   }
   return state;
 };
@@ -50,8 +66,9 @@ const CartProvider = (props) => {
   const addItemToCartHandler = (item) => {
     dispatch({ type: "ADD", item });
   };
-  const removeItemFromCartHandler = (id) => {
-    dispatch({ type: "DEL", id });
+  const removeItemFromCartHandler = (params) => {
+    console.log(params);
+    dispatch({ type: "DEL", name: params.name, amount: params.amount });
   };
   const cartContext = {
     items: state.items || [],

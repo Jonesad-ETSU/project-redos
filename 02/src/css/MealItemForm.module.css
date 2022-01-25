@@ -18,3 +18,15 @@
   background-color: #641e03;
   border-color: #641e03;
 }
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 3ch;
+}
+
+.controls-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2ch;
+}

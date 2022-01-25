@@ -8,6 +8,11 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .modal {
   position: fixed;
   top: 20vh;
