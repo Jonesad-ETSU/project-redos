@@ -12,11 +12,11 @@ This project is a simple List showing app with a form. It allows adding and remo
 This project is slightly more complex than the last. It features a shopping cart with items that are pulled from a firebase realtime database. To do this, it utilizes several react concepts, such as Contexts, Reducers, and Portals.
 <br/>
 The following showcases the initial state of the webpage, after the items load:
-<img align='center' src='images/02_initial.PNG'/>
+<img align='center' alt='Initial Stage of webpage, after loading items from db' src='images/02_initial.PNG'/>
 <br/>
 The following showcases the empty cart feature:
-<img align='center' src='images/02_cart_empty.PNG'/>
+<img align='center' alt='An empty modal sits in the middle of the screen, with a button for exiting the cart' src='images/02_cart_empty.PNG'/>
 <br/>
 The following showcases a Cart filled with items:
-<img align='center' src='images/02_initial.PNG'/>
+<img align='center' alt='A cart modal appears with options to remove individual items as well as showcasing the final price.' src='images/02_cart.PNG'/>
 <br/>
